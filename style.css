@@ -26,7 +26,6 @@ button {
   border-radius: 30px;
   background: rgb(249, 75, 124);
   background: linear-gradient(90deg, rgb(249, 75, 124) 0%, rgb(255, 127, 62) 50%, rgb(201, 187, 114) 100%);
-  cursor: pointer;
   z-index: -2;
 }
 
@@ -59,27 +58,27 @@ header i {
   color: rgb(182, 182, 182);
 }
 
-.about {
+.first_launch {
   padding: 70px 30px;
   position: relative;
   overflow: hidden;
 }
-.about .text_about {
+.first_launch .text_about {
   margin-right: 30%;
 }
-.about .text_about p {
+.first_launch .text_about p {
   color: rgb(182, 182, 182);
   font-size: 18px;
   padding-bottom: 20px;
   font-weight: 400;
   line-height: 25px;
 }
-.about .text_about p:first-child {
+.first_launch .text_about p:first-child {
   font-weight: 800;
   color: rgb(235, 45, 108);
   font-weight: 800;
 }
-.about img {
+.first_launch img {
   height: 400px;
   position: absolute;
   top: 5px;

@@ -1,0 +1,12 @@
+.logos {
+  gap: 20px;
+  padding: $main_padding;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 150px;
+  }
+}

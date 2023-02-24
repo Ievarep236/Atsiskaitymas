@@ -1,0 +1,12 @@
+.super_rare_auction {
+  padding: $main_padding;
+  p {
+    @include main_paragraph();
+    padding: 0;
+    a {
+      color: black;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

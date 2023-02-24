@@ -1,0 +1,24 @@
+.first_launch {
+  padding: $big_padding $main_padding;
+  position: relative;
+  overflow: hidden;
+
+  .text_about {
+    margin-right: 30%;
+    p {
+      @include main_paragraph();
+    }
+
+    & p:first-child {
+      font-weight: 800;
+      @include pink_paragraph();
+    }
+  }
+
+  img {
+    height: 400px;
+    position: absolute;
+    top: 5px;
+    right: -180px;
+  }
+}
