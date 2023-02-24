@@ -1,3 +1,15 @@
+h1 {
+  font-size: 40px;
+  padding-bottom: 20px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -44,29 +56,25 @@ header {
   align-items: center;
 }
 header i {
-  color: rgb(139, 139, 139);
+  color: rgb(216, 216, 216);
 }
 
 .about {
   padding: 70px 30px;
   position: relative;
+  overflow: hidden;
 }
-.about div {
-  margin-right: 35%;
+.about .text_about {
+  margin-right: 30%;
 }
-.about p {
-  color: rgb(139, 139, 139);
+.about .text_about p {
+  color: rgb(216, 216, 216);
   font-size: 16px;
   padding-bottom: 20px;
   font-weight: 500;
   line-height: 25px;
 }
-.about h1 {
-  font-size: 40px;
-  padding-bottom: 20px;
-  font-weight: 800;
-}
-.about p:first-child {
+.about .text_about p:first-child {
   font-weight: 800;
   color: rgb(235, 45, 108);
   font-weight: 800;
@@ -85,8 +93,55 @@ header i {
   background-position: center;
   border-radius: 0;
 }
-.early_birds h2 {
-  font-size: 40px;
+
+.logos {
+  gap: 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: center;
+}
+.logos img {
+  width: 150px;
+}
+
+.super_rare_auction {
+  padding: 30px;
+}
+.super_rare_auction > p {
+  color: rgb(216, 216, 216);
+  font-size: 16px;
   padding-bottom: 20px;
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 25px;
+  padding-bottom: 40px;
+}
+.super_rare_auction > p > a {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.super_rare_auction .NFT_list .NFT_card {
+  width: 350px;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.super_rare_auction .NFT_list .NFT_card img {
+  width: 350px;
+}
+.super_rare_auction .NFT_list .NFT_card .card_text {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 20px;
+  background-color: rgb(216, 216, 216);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.super_rare_auction .NFT_list .NFT_card .card_text p {
+  color: black;
+}
+.super_rare_auction .NFT_list .NFT_card .card_text .text_right {
+  justify-self: flex-end;
 }/*# sourceMappingURL=style.css.map */

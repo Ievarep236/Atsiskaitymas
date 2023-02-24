@@ -1,4 +1,4 @@
-$grey_color: rgb(139, 139, 139);
+$grey_color: rgb(216, 216, 216);
 $pink_color: rgb(235, 45, 108);
 $main_padding: 30px;
 $spacing_padding: 20px;
@@ -6,24 +6,24 @@ $big_padding: 70px;
 $p_font_size: 16px;
 $h_font_size: 40px;
 
+h1 {
+  font-size: $h_font_size;
+  padding-bottom: $spacing_padding;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: $h_font_size;
+  padding-bottom: $spacing_padding;
+  font-weight: 600;
+}
+
 @mixin main_paragraph() {
   color: $grey_color;
   font-size: $p_font_size;
   padding-bottom: $spacing_padding;
   font-weight: 500;
   line-height: 25px;
-}
-
-@mixin main_header() {
-  font-size: $h_font_size;
-  padding-bottom: $spacing_padding;
-  font-weight: 800;
-}
-
-@mixin second_header() {
-  font-size: $h_font_size;
-  padding-bottom: $spacing_padding;
-  font-weight: 600;
 }
 
 @mixin pink_paragraph() {
@@ -87,21 +87,19 @@ header {
 
 .about {
   padding: $big_padding $main_padding;
-
   position: relative;
-  div {
-    margin-right: 35%;
-  }
-  p {
-    @include main_paragraph();
-  }
-  h1 {
-    @include main_header();
-  }
+  overflow: hidden;
 
-  & p:first-child {
-    font-weight: 800;
-    @include pink_paragraph();
+  .text_about {
+    margin-right: 30%;
+    p {
+      @include main_paragraph();
+    }
+
+    & p:first-child {
+      font-weight: 800;
+      @include pink_paragraph();
+    }
   }
 
   img {
@@ -119,7 +117,59 @@ header {
   background-position: center;
 
   border-radius: 0;
-  h2 {
-    @include second_header();
+}
+
+.logos {
+  gap: 20px;
+  padding: $main_padding;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 150px;
+  }
+}
+
+.super_rare_auction {
+  padding: $main_padding;
+  & > p {
+    @include main_paragraph();
+    padding-bottom: 40px;
+    & > a {
+      color: black;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .NFT_list {
+    .NFT_card {
+      width: 350px;
+      display: grid;
+      grid-template-rows: auto auto;
+      img {
+        width: 350px;
+      }
+      .card_text {
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding: $spacing_padding;
+        background-color: $grey_color;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        p {
+          color: black;
+        }
+
+        .text_right {
+          justify-self: flex-end;
+        }
+
+        .text_left {
+        }
+      }
+    }
   }
 }
