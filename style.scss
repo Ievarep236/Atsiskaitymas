@@ -1,4 +1,35 @@
-$pink_color: 1.5rem;
+$grey_color: rgb(139, 139, 139);
+$pink_color: rgb(235, 45, 108);
+$main_padding: 30px;
+$spacing_padding: 20px;
+$big_padding: 70px;
+$p_font_size: 16px;
+$h_font_size: 40px;
+
+@mixin main_paragraph() {
+  color: $grey_color;
+  font-size: $p_font_size;
+  padding-bottom: $spacing_padding;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+@mixin main_header() {
+  font-size: $h_font_size;
+  padding-bottom: $spacing_padding;
+  font-weight: 800;
+}
+
+@mixin second_header() {
+  font-size: $h_font_size;
+  padding-bottom: $spacing_padding;
+  font-weight: 600;
+}
+
+@mixin pink_paragraph() {
+  color: $pink_color;
+  font-weight: 800;
+}
 
 * {
   margin: 0;
@@ -7,7 +38,88 @@ $pink_color: 1.5rem;
   font-family: 'Montserrat', sans-serif;
 }
 
+button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 30px;
+  background: rgb(249, 75, 124);
+  background: linear-gradient(
+    90deg,
+    rgba(249, 75, 124, 1) 0%,
+    rgba(255, 127, 62, 1) 50%,
+    rgba(201, 187, 114, 1) 100%
+  );
+  cursor: pointer;
+  z-index: -2;
+}
+
+button::before {
+  content: '';
+  border-radius: 30px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  background-color: white;
+  z-index: -1;
+}
+
+button::after {
+  font-size: $p_font_size;
+  color: black;
+  content: 'Sign up';
+  font-weight: 800;
+}
+
 header {
   display: flex;
-  padding: 20px;
+  padding: $main_padding;
+  justify-content: space-between;
+  align-items: center;
+  i {
+    color: $grey_color;
+  }
+}
+
+.about {
+  padding: $big_padding $main_padding;
+
+  position: relative;
+  div {
+    margin-right: 35%;
+  }
+  p {
+    @include main_paragraph();
+  }
+  h1 {
+    @include main_header();
+  }
+
+  & p:first-child {
+    font-weight: 800;
+    @include pink_paragraph();
+  }
+
+  img {
+    height: 400px;
+    position: absolute;
+    top: 5px;
+    right: -180px;
+  }
+}
+
+.early_birds {
+  padding: 100px $main_padding $main_padding $main_padding;
+  background-image: url(assets/background.svg);
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 0;
+  h2 {
+    @include second_header();
+  }
 }
