@@ -1,6 +1,6 @@
 $grey_color: rgb(182, 182, 182);
 $pink_color: rgb(235, 45, 108);
-$main_padding: 30px;
+$main_padding: 40px;
 $spacing_padding: 20px;
 $big_padding: 70px;
 $p_font_size: 18px;
@@ -159,17 +159,19 @@ header {
   gap: 10px;
 
   .NFT_card {
-    width: auto;
+    background-color: $grey_color;
+    border-radius: 20px;
+    width: 350px;
     display: grid;
     grid-template-rows: auto auto;
     img {
       width: 350px;
     }
     .card_text {
-      border-bottom-right-radius: 20px;
-      border-bottom-left-radius: 20px;
+      // border-bottom-right-radius: 20px;
+      // border-bottom-left-radius: 20px;
       padding: $spacing_padding;
-      background-color: $grey_color;
+      // background-color: $grey_color;
       display: grid;
       grid-template-columns: auto auto;
 
@@ -191,6 +193,7 @@ header {
         }
 
         .price {
+          padding-bottom: 10px;
           display: flex;
           justify-content: flex-end;
           gap: 10px;
@@ -207,6 +210,7 @@ header {
         p:nth-child(2) {
           font-size: 25px;
           font-weight: 500;
+          padding-bottom: 10px;
         }
         p:first-child {
           font-size: 13px;
@@ -273,7 +277,6 @@ footer {
 
   .copyright {
     color: $grey_color;
-    padding-bottom: $main_padding;
     & p:last-child {
       display: none;
     }
@@ -332,12 +335,21 @@ footer {
   }
 
   .second_launch {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: $main_padding;
+    margin-right: $main_padding;
     img {
       right: 90px;
     }
   }
 
   .NFT_list {
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: $main_padding;
+    margin-right: $main_padding;
     .NFT_card {
       width: auto;
 
@@ -395,8 +407,6 @@ footer {
   }
 
   footer {
-    padding-top: $big_padding;
-    padding-bottom: $big_padding;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     .links {
