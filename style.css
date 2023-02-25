@@ -1,17 +1,12 @@
-@media (min-width: 620px) {
-  h1 {
-    font-size: 70px;
-  }
-}
 h1 {
-  font-size: 2.5rem;
-  padding-bottom: 1.25rem;
+  font-size: 40px;
+  padding-bottom: 20px;
   font-weight: 800;
 }
 
 h2 {
-  font-size: 2.5rem;
-  padding-bottom: 1.25rem;
+  font-size: 40px;
+  padding-bottom: 20px;
   font-weight: 600;
 }
 
@@ -31,6 +26,7 @@ button {
   border-radius: 30px;
   background: rgb(249, 75, 124);
   background: linear-gradient(90deg, rgb(249, 75, 124) 0%, rgb(255, 127, 62) 50%, rgb(201, 187, 114) 100%);
+  cursor: pointer;
   z-index: -2;
 }
 
@@ -47,7 +43,7 @@ button::before {
 }
 
 button::after {
-  font-size: 1.125rem;
+  font-size: 18px;
   color: black;
   content: "Sign up";
   font-weight: 800;
@@ -55,34 +51,16 @@ button::after {
 
 header {
   display: flex;
-  padding: 1.875rem;
+  padding: 30px;
   justify-content: space-between;
   align-items: center;
 }
 header i {
   color: rgb(182, 182, 182);
 }
-header .navigation {
-  display: none;
-}
 
-@media (min-width: 620px) {
-  header .burger {
-    display: none;
-  }
-  header .navigation {
-    display: block;
-  }
-  header .navigation a {
-    color: rgb(182, 182, 182);
-    padding-left: 4px;
-  }
-  header .navigation a:last-child {
-    color: rgb(235, 45, 108);
-  }
-}
 .first_launch {
-  padding: 4.375rem 1.875rem;
+  padding: 70px 30px;
   position: relative;
   overflow: hidden;
 }
@@ -91,8 +69,8 @@ header .navigation {
 }
 .first_launch .text_about p {
   color: rgb(182, 182, 182);
-  font-size: 1.125rem;
-  padding-bottom: 1.25rem;
+  font-size: 18px;
+  padding-bottom: 20px;
   font-weight: 400;
   line-height: 25px;
 }
@@ -102,23 +80,14 @@ header .navigation {
   font-weight: 800;
 }
 .first_launch img {
-  height: 25rem;
+  height: 400px;
   position: absolute;
-  top: 0.3125rem;
-  right: -11.25rem;
-}
-@media (min-width: 620px) {
-  .first_launch .text_about {
-    margin-right: 40%;
-  }
-  .first_launch img {
-    top: 50px;
-    right: -10px;
-  }
+  top: 5px;
+  right: -180px;
 }
 
 .early_birds {
-  padding: 100px 1.875rem 1.875rem 1.875rem;
+  padding: 100px 30px 30px 30px;
   background-image: url(assets/background.svg);
   background-size: cover;
   background-position: center;
@@ -126,8 +95,8 @@ header .navigation {
 }
 
 .logos {
-  gap: 1.25rem;
-  padding: 1.875rem;
+  gap: 20px;
+  padding: 30px;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
@@ -135,16 +104,16 @@ header .navigation {
   justify-content: center;
 }
 .logos img {
-  width: 9.375rem;
+  width: 150px;
 }
 
 .super_rare_auction {
-  padding: 1.875rem;
+  padding: 30px;
 }
 .super_rare_auction p {
   color: rgb(182, 182, 182);
-  font-size: 1.125rem;
-  padding-bottom: 1.25rem;
+  font-size: 18px;
+  padding-bottom: 20px;
   font-weight: 400;
   line-height: 25px;
   padding: 0;
@@ -156,8 +125,8 @@ header .navigation {
 }
 
 .NFT_list {
-  padding: 1.875rem;
-  padding-bottom: 6.25rem;
+  padding: 30px;
+  padding-bottom: 100px;
   border-bottom: 1px solid rgb(182, 182, 182);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -166,17 +135,17 @@ header .navigation {
   gap: 10px;
 }
 .NFT_list .NFT_card {
-  width: 21.875rem;
+  width: 350px;
   display: grid;
   grid-template-rows: auto auto;
 }
 .NFT_list .NFT_card img {
-  width: 21.875rem;
+  width: 350px;
 }
 .NFT_list .NFT_card .card_text {
-  border-bottom-right-radius: 1.25rem;
-  border-bottom-left-radius: 1.25rem;
-  padding: 1.25rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 20px;
   background-color: rgb(182, 182, 182);
   display: grid;
   grid-template-columns: auto auto;
@@ -188,37 +157,37 @@ header .navigation {
   text-align: right;
 }
 .NFT_list .NFT_card .card_text .text_right p:not(:last-child) {
-  padding-bottom: 0.625rem;
+  padding-bottom: 10px;
 }
 .NFT_list .NFT_card .card_text .text_right p:nth-child(2) {
-  font-size: 1.5625rem;
+  font-size: 25px;
   font-weight: 500;
 }
 .NFT_list .NFT_card .card_text .text_right p:first-child {
-  font-size: 0.8125rem;
+  font-size: 13px;
 }
 .NFT_list .NFT_card .card_text .text_right .price {
   display: flex;
-  gap: 0.625rem;
+  gap: 10px;
 }
 .NFT_list .NFT_card .card_text .text_right .price img {
-  width: 1.125rem;
+  width: 18px;
 }
 .NFT_list .NFT_card .card_text .text_left p:first-child {
-  padding-bottom: 0.625rem;
+  padding-bottom: 10px;
 }
 .NFT_list .NFT_card .card_text .text_left p:nth-child(2) {
-  font-size: 1.5625rem;
+  font-size: 25px;
   font-weight: 500;
 }
 .NFT_list .NFT_card .card_text .text_left p:first-child {
-  font-size: 0.8125rem;
+  font-size: 13px;
   color: rgb(255, 145, 0);
 }
 
 .second_launch {
   border-bottom: 1px solid rgb(182, 182, 182);
-  padding: 4.375rem 1.875rem;
+  padding: 70px 30px;
   position: relative;
   overflow: hidden;
 }
@@ -227,8 +196,8 @@ header .navigation {
 }
 .second_launch .text_about p {
   color: rgb(182, 182, 182);
-  font-size: 1.125rem;
-  padding-bottom: 1.25rem;
+  font-size: 18px;
+  padding-bottom: 20px;
   font-weight: 400;
   line-height: 25px;
 }
@@ -238,39 +207,39 @@ header .navigation {
   font-weight: 800;
 }
 .second_launch img {
-  height: 25rem;
+  height: 400px;
   position: absolute;
-  right: -1.25rem;
+  right: -20px;
   bottom: 0;
 }
 
 footer {
   display: grid;
   grid-template-rows: auto auto;
-  gap: 3.125rem;
-  padding: 1.875rem;
+  gap: 50px;
+  padding: 30px;
 }
 footer .socials img {
-  padding-bottom: 0.625rem;
+  padding-bottom: 10px;
 }
 footer .socials p {
-  padding-bottom: 0.625rem;
+  padding-bottom: 10px;
   color: rgb(182, 182, 182);
 }
 footer .socials i {
   color: rgb(182, 182, 182);
-  padding-right: 0.3125rem;
+  padding-right: 5px;
 }
 footer .links {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
-  gap: 1.875rem;
+  gap: 30px;
 }
 footer .links .links_text p:first-child {
   font-weight: 600;
-  padding-bottom: 1.125rem;
+  padding-bottom: 18px;
 }
 footer > p {
-  padding-bottom: 1.875rem;
+  padding-bottom: 30px;
 }/*# sourceMappingURL=style.css.map */
