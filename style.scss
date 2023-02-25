@@ -68,16 +68,7 @@ button::after {
   font-weight: 800;
 }
 
-header {
-  display: flex;
-  padding: $main_padding;
-  justify-content: space-between;
-  align-items: center;
-  i {
-    color: $grey_color;
-  }
-}
-
+@import 'header';
 @import 'first_launch';
 @import 'early_birds';
 @import 'logos';

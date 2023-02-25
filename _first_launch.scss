@@ -16,9 +16,19 @@
   }
 
   img {
-    height: 400px;
+    height: 25rem;
     position: absolute;
-    top: 5px;
-    right: -180px;
+    top: 0.3125rem;
+    right: -11.25rem;
+  }
+
+  @media (min-width: 620px) {
+    .text_about {
+      margin-right: 40%;
+    }
+    img {
+      top: 50px;
+      right: -10px;
+    }
   }
 }
