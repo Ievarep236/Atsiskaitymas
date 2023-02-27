@@ -1,0 +1,420 @@
+$grey_color: rgb(182, 182, 182);
+$pink_color: rgb(235, 45, 108);
+$main_padding: 40px;
+$spacing_padding: 20px;
+$big_padding: 70px;
+$p_font_size: 18px;
+$h_font_size: 40px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: $h_font_size;
+  padding-bottom: $spacing_padding;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: $h_font_size;
+  padding-bottom: $spacing_padding;
+  font-weight: 600;
+}
+
+@mixin main_paragraph() {
+  color: $grey_color;
+  font-size: $p_font_size;
+  padding-bottom: $spacing_padding;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+@mixin pink_paragraph() {
+  color: $pink_color;
+  font-weight: 800;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 30px;
+  background: rgb(249, 75, 124);
+  background: linear-gradient(
+    90deg,
+    rgba(249, 75, 124, 1) 0%,
+    rgba(255, 127, 62, 1) 50%,
+    rgba(201, 187, 114, 1) 100%
+  );
+  z-index: -2;
+  font-size: $p_font_size;
+  color: black;
+  font-weight: 800;
+}
+
+button::before {
+  content: '';
+  border-radius: 30px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  background-color: white;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  padding: $main_padding;
+  justify-content: space-between;
+  align-items: center;
+  .navigation {
+    display: none;
+  }
+  i {
+    color: $grey_color;
+  }
+}
+
+.first_launch {
+  padding: $big_padding $main_padding;
+  position: relative;
+  overflow: hidden;
+
+  .text_about {
+    margin-right: 30%;
+    p {
+      @include main_paragraph();
+    }
+
+    & p:first-child {
+      font-weight: 800;
+      @include pink_paragraph();
+    }
+  }
+
+  img {
+    height: 400px;
+    position: absolute;
+    top: 5px;
+    right: -150px;
+  }
+}
+
+.early_birds {
+  padding: $big_padding $main_padding $main_padding;
+  margin-bottom: $main_padding;
+  margin-top: $main_padding;
+  background-image: url(assets/background.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.logos {
+  gap: 20px;
+  padding: $main_padding;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: center;
+  .fifth_company {
+    display: none;
+  }
+  img {
+    width: 150px;
+  }
+}
+
+.super_rare_auction {
+  padding: $main_padding;
+  p {
+    @include main_paragraph();
+    padding: 0;
+    a {
+      color: black;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.NFT_list {
+  padding: $main_padding;
+  padding-bottom: 100px;
+  border-bottom: 1px solid $grey_color;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow: hidden;
+  width: 100%;
+  gap: 10px;
+
+  .NFT_card {
+    background-color: $grey_color;
+    border-radius: 20px;
+    width: 350px;
+    display: grid;
+    grid-template-rows: auto auto;
+    img {
+      width: 350px;
+    }
+    .card_text {
+      padding: $spacing_padding;
+      display: grid;
+      grid-template-columns: auto auto;
+
+      .text_right {
+        justify-self: flex-end;
+        p {
+          text-align: right;
+        }
+
+        p:not(:last-child) {
+          padding-bottom: 10px;
+        }
+        p:nth-child(2) {
+          font-size: 25px;
+          font-weight: 500;
+        }
+        p:first-child {
+          font-size: 13px;
+        }
+
+        .price {
+          padding-bottom: 10px;
+          display: flex;
+          justify-content: flex-end;
+          gap: 10px;
+          img {
+            width: 18px;
+          }
+        }
+      }
+
+      .text_left {
+        p:first-child {
+          padding-bottom: 10px;
+        }
+        p:nth-child(2) {
+          font-size: 25px;
+          font-weight: 500;
+          padding-bottom: 10px;
+        }
+        p:first-child {
+          font-size: 13px;
+          color: rgb(255, 145, 0);
+        }
+      }
+    }
+  }
+}
+
+.second_launch {
+  border-bottom: 1px solid $grey_color;
+  padding: $big_padding $main_padding;
+  position: relative;
+  overflow: hidden;
+  .text_about {
+    margin-right: 40%;
+    p {
+      @include main_paragraph();
+    }
+
+    & p:first-child {
+      font-weight: 800;
+      @include pink_paragraph();
+    }
+  }
+
+  img {
+    height: 400px;
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 50px;
+  padding: $main_padding;
+  .socials {
+    img {
+      padding-bottom: 10px;
+    }
+    p {
+      padding-bottom: 10px;
+      color: $grey_color;
+    }
+    i {
+      color: $grey_color;
+      padding-right: 5px;
+    }
+  }
+  .links {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    .links_text p:first-child {
+      font-weight: 600;
+      padding-bottom: 18px;
+    }
+  }
+
+  .copyright {
+    color: $grey_color;
+    & p:last-child {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  h1 {
+    font-size: 70px;
+  }
+  header {
+    .burger {
+      display: none;
+    }
+    .navigation {
+      display: block;
+      color: $grey_color;
+      padding-left: 10px;
+      & a:not(:last-child) {
+        padding-right: 10px;
+      }
+      & a:last-child {
+        color: $pink_color;
+      }
+    }
+  }
+
+  .first_launch {
+    padding-bottom: 120px;
+    .text_about {
+      margin-right: 50%;
+    }
+
+    img {
+      top: 0px;
+      right: -70px;
+      height: 500px;
+    }
+  }
+
+  .early_birds {
+    border-radius: 10px;
+    margin-left: $main_padding;
+    margin-right: $main_padding;
+  }
+
+  .logos {
+    display: flex;
+    justify-content: space-between;
+    .fifth_company {
+      display: block;
+    }
+    img {
+      width: 100px;
+    }
+  }
+
+  .second_launch {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: $main_padding;
+    margin-right: $main_padding;
+    img {
+      right: 90px;
+    }
+  }
+
+  .NFT_list {
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: $main_padding;
+    margin-right: $main_padding;
+    .NFT_card {
+      width: auto;
+
+      img {
+        background-size: cover;
+        width: 100%;
+      }
+      .card_text {
+        width: 100%;
+
+        .text_left {
+          p:first-child {
+            padding-bottom: 12px;
+            font-size: 12px;
+          }
+          p:nth-child(2) {
+            font-size: 15px;
+            font-weight: 500;
+            padding-bottom: 10px;
+          }
+          p:last-child {
+            font-size: 12px;
+          }
+        }
+        .text_right {
+          p:not(:last-child) {
+            padding-bottom: 10px;
+          }
+          p:nth-child(2) {
+            font-size: 12px;
+            font-weight: 500;
+          }
+          p:first-child {
+            font-size: 12px;
+          }
+          p:last-child {
+            font-size: 12px;
+          }
+
+          .price {
+            padding-bottom: 10px;
+            gap: 5px;
+
+            p {
+              font-size: 15px;
+              width: auto;
+            }
+            img {
+              width: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    .links {
+      grid-template-columns: auto auto auto auto;
+    }
+
+    .copyright {
+      grid-column: span 2;
+      display: flex;
+      justify-content: space-between;
+      & p:last-child {
+        display: block;
+      }
+    }
+  }
+}
