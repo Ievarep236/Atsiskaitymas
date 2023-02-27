@@ -6,6 +6,13 @@ $big_padding: 70px;
 $p_font_size: 18px;
 $h_font_size: 40px;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 h1 {
   font-size: $h_font_size;
   padding-bottom: $spacing_padding;
@@ -29,13 +36,6 @@ h2 {
 @mixin pink_paragraph() {
   color: $pink_color;
   font-weight: 800;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
 }
 
 button {
@@ -109,14 +109,12 @@ header {
 }
 
 .early_birds {
-  padding: 100px $main_padding $main_padding;
+  padding: $big_padding $main_padding $main_padding;
   margin-bottom: $main_padding;
   margin-top: $main_padding;
   background-image: url(assets/background.svg);
   background-size: cover;
   background-position: center;
-
-  border-radius: 0;
 }
 
 .logos {
@@ -168,10 +166,7 @@ header {
       width: 350px;
     }
     .card_text {
-      // border-bottom-right-radius: 20px;
-      // border-bottom-left-radius: 20px;
       padding: $spacing_padding;
-      // background-color: $grey_color;
       display: grid;
       grid-template-columns: auto auto;
 
@@ -358,7 +353,7 @@ footer {
         width: 100%;
       }
       .card_text {
-        width: auto;
+        width: 100%;
 
         .text_left {
           p:first-child {
@@ -411,7 +406,6 @@ footer {
     grid-template-rows: auto;
     .links {
       grid-template-columns: auto auto auto auto;
-      grid-template-rows: auto;
     }
 
     .copyright {

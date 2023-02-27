@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
 h1 {
   font-size: 40px;
   padding-bottom: 20px;
@@ -8,13 +15,6 @@ h2 {
   font-size: 40px;
   padding-bottom: 20px;
   font-weight: 600;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
 button {
@@ -85,13 +85,12 @@ header i {
 }
 
 .early_birds {
-  padding: 100px 40px 40px;
+  padding: 70px 40px 40px;
   margin-bottom: 40px;
   margin-top: 40px;
   background-image: url(assets/background.svg);
   background-size: cover;
   background-position: center;
-  border-radius: 0;
 }
 
 .logos {
@@ -320,7 +319,7 @@ footer .copyright p:last-child {
     width: 100%;
   }
   .NFT_list .NFT_card .card_text {
-    width: auto;
+    width: 100%;
   }
   .NFT_list .NFT_card .card_text .text_left p:first-child {
     padding-bottom: 12px;
@@ -364,7 +363,6 @@ footer .copyright p:last-child {
   }
   footer .links {
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto;
   }
   footer .copyright {
     grid-column: span 2;
